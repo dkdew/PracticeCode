@@ -1,13 +1,12 @@
-package linkedlist;
 
 /**
  * Created by Dinesh Dewangan on 15/06/19.
  */
 public class PivotPartition {
 
-    static Node head;
+    static ListNode head;
     public static void main(String ar[]) {
-         head = new Node(3);
+         head = new ListNode(3);
         head = head.pushAtHead(head,8);
         head = head.pushAtHead(head, 1);
         head = head.pushAtHead(head, 0);
@@ -18,16 +17,16 @@ public class PivotPartition {
         head.printList(head);
     }
 
-    public static  Node partition(Node head, int pivot) {
+    public static  ListNode partition(ListNode head, int pivot) {
         if (head == null) {
             return head;
         }
-        Node smallHead = null;
-        Node smallLast = null;
-        Node equalHead = null;
-        Node equalLast = null;
-        Node greaterHead = null;
-        Node greaterLast = null;
+        ListNode smallHead = null;
+        ListNode smallLast = null;
+        ListNode equalHead = null;
+        ListNode equalLast = null;
+        ListNode greaterHead = null;
+        ListNode greaterLast = null;
 
         while (head != null) {
             if (head.data < pivot) {

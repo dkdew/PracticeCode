@@ -1,8 +1,4 @@
-package BTree;
 
-/**
- * Created by Dinesh Dewangan on 23/05/19.
- */
 public class Height {
 
     static TreeNode root;

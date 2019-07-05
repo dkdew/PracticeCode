@@ -1,9 +1,7 @@
-package queue;
-
 public class Queue {
 
-    Node start;
-    Node end;
+    ListNode start;
+    ListNode end;
 
     public static void main(String ar[]){
         Queue queue = new Queue();
@@ -14,14 +12,14 @@ public class Queue {
         }
     }
     public void enqueue(int data){
-        Node node = new Node(data);
+        ListNode ListNode = new ListNode(data);
         if(isEmpty()){
-            start = node;
-            end = node;
+            start = ListNode;
+            end = ListNode;
         }
         else{
-            end.next = node;
-            end = node;
+            end.next = ListNode;
+            end = ListNode;
         }
     }
 
@@ -30,13 +28,13 @@ public class Queue {
             System.out.println("queue is empty");
             return -1;
         }
-        Node node = start;
+        ListNode ListNode = start;
         if(start.next != null) {
             start = start.next;
         }else{
             start = null;
         }
-        return node.data;
+        return ListNode.data;
     }
 
     public int top(){
@@ -50,11 +48,11 @@ public class Queue {
     public boolean isEmpty(){
         return (start == null || end == null);
     }
-    public static class Node {
+    public static class ListNode {
          int data;
-         Node next;
+         ListNode next;
 
-        public Node(int data){
+        public ListNode(int data){
             this.data = data;
             next = null;
         }

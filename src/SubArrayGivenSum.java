@@ -1,7 +1,3 @@
-package array;
-
-import java.io.*;
-
 class SubArrayGivenSum {
 	public static void main (String[] args) {
 		System.out.println("GfG!");

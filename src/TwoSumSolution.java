@@ -1,6 +1,3 @@
-/*package whatever //do not write package name here */
-
-package array;
 
 import java.io.*;
 import java.util.Arrays;

@@ -1,4 +1,3 @@
-package stack;
 
 /**
  * Created by Dinesh Dewangan on 01/06/19.

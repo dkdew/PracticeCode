@@ -1,37 +1,36 @@
-package linkedlist;
 
 public class AddTwoNumbers {
 
-	Node l1;
-	Node l2;
+	ListNode l1;
+	ListNode l2;
 	public static void main(String[] args) {
 		AddTwoNumbers atn = new AddTwoNumbers();
-		atn.l1= new Node(1);
-		atn.l1.next = new Node(2);
-		atn.l1.next.next = new Node(3);
+		atn.l1= new ListNode(1);
+		atn.l1.next = new ListNode(2);
+		atn.l1.next.next = new ListNode(3);
 		atn.printList(atn.l1);
-		atn.l2 = new Node(5);
-		atn.l2.next = new Node(6);
-		atn.l2.next.next = new Node(7);
+		atn.l2 = new ListNode(5);
+		atn.l2.next = new ListNode(6);
+		atn.l2.next.next = new ListNode(7);
 		atn.printList(atn.l2);
 		System.out.println("new list");
 		atn.printList(atn.addTwoNumbers(atn.l1, atn.l2));
 
 	}
 	
-	public void printList(Node head){
-		Node current = head;
+	public void printList(ListNode head){
+		ListNode current = head;
 		while(current != null){
 			System.out.println(current.data);
 			current = current.next;
 		}
 	}
 	
-    public Node addTwoNumbers(Node l1, Node l2) {
+    public ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         int sum = 0;
         int carry = 0;
         int num = 0;
-        Node head= null, current=null ;
+        ListNode head= null, current=null ;
         while(l1 != null || l2 != null){
         
         	sum = 0;
@@ -52,10 +51,10 @@ public class AddTwoNumbers {
                 carry = 0;
             }
             if(head == null){
-                head = new Node(num);
+                head = new ListNode(num);
                 current = head;
             }else{
-                Node n = new Node(num);
+                ListNode n = new ListNode(num);
                 current.next = n;
                 current = n;
             }
@@ -67,7 +66,7 @@ public class AddTwoNumbers {
             
         }
         if(carry>0){
-        	Node n = new Node(carry);
+        	ListNode n = new ListNode(carry);
         	current.next = n;
         }
         return head;

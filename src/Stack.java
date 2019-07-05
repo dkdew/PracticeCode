@@ -3,16 +3,7 @@
  */
 public class Stack {
 
-    class Node {
-        int data;
-        Node next;
-
-        Node(int data) {
-            this.data = data;
-        }
-    }
-
-    Node top;
+    ListNode top;
 
     public boolean isEmpty() {
         return top == null;
@@ -27,17 +18,17 @@ public class Stack {
     }
 
     public int pop() {
-        Node node = top;
+        ListNode ListNode = top;
         top = top.next;
-        return node.data;
+        return ListNode.data;
     }
 
     public void push(int data) {
-        Node node = new Node(data);
+        ListNode ListNode = new ListNode(data);
         if (top != null) {
-            node.next = top;
+            ListNode.next = top;
         } else {
-            top = node;
+            top = ListNode;
         }
     }
 

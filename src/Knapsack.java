@@ -1,4 +1,4 @@
-package BTree;
+
 
 public class Knapsack {
     public int solveKnapsack(int[] profits, int[] weights, int capacity) {
@@ -27,7 +27,7 @@ public class Knapsack {
     }
 
     public static void main(String[] args) {
-        KnapsackInfiniteSupplyRec ks = new KnapsackInfiniteSupplyRec();
+        Knapsack ks = new Knapsack();
         int[] profits = {1, 6, 10, 16};
         int[] weights = {1, 2, 3, 5};
         int maxProfit = ks.solveKnapsack(profits, weights, 7);

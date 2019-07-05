@@ -1,21 +1,29 @@
-package array;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Permutations {
 
+	List<Integer> list = new ArrayList<Integer>();
 	public static void main(String args[]) {
-		permute("dinesh",6, 0);
+		List<Integer> list = new ArrayList<Integer>();
+		int n = 123;
+		String s = String.valueOf(n);
+		permute(s,0, s.length()-1, list);
+		System.out.println(list);
+
 	}
 
-	public static void permute(String s, int n, int i){
-		if(i==n){
+	public static void permute(String s, int l, int r, List<Integer> list){
+		if(l==r){
 			System.out.println(s);
+			list.add(Integer.valueOf(s));
 			return;
 		}
 
-		for(int j = i; j<n; j++){
-			s = swap(s, i, j);
-			permute(s, n, j+1);
-			s = swap(s, i, j);
+		for(int i = l; i<=r; i++){
+			s = swap(s, l, i);
+			permute(s, l+1, r,  list);
+			s = swap(s, l, i);
 		}
 	}
 
